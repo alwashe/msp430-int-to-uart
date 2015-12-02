@@ -42,7 +42,8 @@ int main(void) {
 			int8_t i = 3;
 
 			while (i >= 0) {
-				buf[i] = int2asci(i);					// 1=>48	2=>49 etc
+//				buf[i] = int2asci(i);					// alternativ
+				buf[i] = i + '0';
 				i--;
 			}
 			puts(buf);
@@ -57,17 +58,39 @@ int main(void) {
 uint8_t int2asci(uint8_t zahl) {
 	uint8_t asci;
 	switch (zahl) {
-	case 0:	asci = 48;	break;
-	case 1:	asci = 49;	break;
-	case 2:	asci = 50;	break;
-	case 3:	asci = 51;	break;
-	case 4:	asci = 52;	break;
-	case 5:	asci = 53;	break;
-	case 6:	asci = 54;	break;
-	case 7:	asci = 55;	break;
-	case 8:	asci = 56;	break;
-	case 9:	asci = 57;	break;
-	default:asci = 65;	break;
+	case 0:
+		asci = 48;
+		break;
+	case 1:
+		asci = 49;
+		break;
+	case 2:
+		asci = 50;
+		break;
+	case 3:
+		asci = 51;
+		break;
+	case 4:
+		asci = 52;
+		break;
+	case 5:
+		asci = 53;
+		break;
+	case 6:
+		asci = 54;
+		break;
+	case 7:
+		asci = 55;
+		break;
+	case 8:
+		asci = 56;
+		break;
+	case 9:
+		asci = 57;
+		break;
+	default:
+		asci = 65;
+		break;
 	}
 	return asci;
 }
